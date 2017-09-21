@@ -13,10 +13,21 @@
       <div class="panel panel-default">
         <h1 class="jumbotron">ROMAN NUMERALS</h1>
         <div class="panel-body">
-          <form id="roman" action="index.html" method="post">
-            <input id="userInput" type="number" placeholder="Enter a number">
-            <button type="submit" name="button" class="btn-danger">Make it ROMAN BOIII!!!</button>
-          </form>
+          <div class="row">
+            <div class="col-md-6">
+              <form id="to-roman">
+                <input id="to-roman-input" type="text" placeholder="Enter a number">
+                <button type="submit" name="button" class="btn-danger">Make it ROMAN BOIII!!!</button>
+              </form>
+            </div>
+
+            <div class="col-md-6">
+              <form id="to-decimal">
+                <input id="to-decimal-input" type="text" placeholder="Enter a roman numeral">
+                <button type="submit" name="button" class="btn-success">Make it DECIMAL BOIII!!!</button>
+              </form>
+            </div>
+          </div>
           <div class="jumbotron">
             <h1 class="output"></h1>
           </div>
