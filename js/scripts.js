@@ -7,8 +7,7 @@ var conversionMap = {
   V: 5,
   I: 1
 };
-
-
+var keys = Object.keys(conversionMap);
 
 function toRoman(userInput) {
   if (userInput > 3999) {
@@ -16,30 +15,14 @@ function toRoman(userInput) {
   }
   var romanArray = [];
   var output = ""
-  while (userInput > 0) {
-    if (userInput >= 1000) {
-      romanArray.push("M");
-      userInput -= 1000;
-    } else if (userInput >= 500) {
-      romanArray.push("D");
-      userInput -= 500;
-    } else if (userInput >= 100) {
-      romanArray.push("C");
-      userInput -= 100;
-    } else if (userInput >= 50) {
-      romanArray.push("L");
-      userInput -= 50;
-    } else if (userInput >= 10) {
-      romanArray.push("X");
-      userInput -= 10;
-    } else if (userInput >= 5) {
-      romanArray.push("V");
-      userInput -= 5;
-    } else if (userInput >= 1) {
-      romanArray.push("I");
-      userInput -= 1;
+
+  for (i = 0; i < keys.length; i++) {
+    var currentKey = keys[i];
+    while (userInput >= conversionMap[currentKey]) {
+        romanArray.push(currentKey);
+        userInput -= conversionMap[currentKey];
     }
-  };
+  }
   output = romanArray.join("");
   output = output.replace(/V[I]{4}/g, "IX");
   output = output.replace(/[I]{4}/g, "IV");
