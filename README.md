@@ -9,4 +9,5 @@
 |will write 100 as C| 100| C|
 |will write 500 as D| 500| D|
 |will write 1000 as M| 1000| M|
-|will combine these|123|CXXIII|
+|will combine all previous rules additively|123|CXXIII|
+|will correct notation of 4 symbols in a row|90|XC|
